@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Buddy - Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Your Travel Buddy Account</h1>
+        <form id="signupForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="text" id="mobileNumber" name="mobileNumber" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="registrationNumber">Registration Number:</label>
+            <input type="text" id="registrationNumber" name="registrationNumber" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <p>Already have an account? <a href="login.html">Login Here</a></p>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Here you would add sign-up logic like saving the user details to a database
+            window.location.href = 'login.html';  // Redirect to login after sign up
+        });
+    </script>
+</body>
+</html>
